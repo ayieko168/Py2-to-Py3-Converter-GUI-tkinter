@@ -1,0 +1,26 @@
+Usage: 2to3 [options] file|dir ...
+
+Options:
+  -h, --help            show this help message and exit
+  -d, --doctests_only   Fix up doctests only
+  -f FIX, --fix=FIX     Each FIX specifies a transformation; default: all
+  -j PROCESSES, --processes=PROCESSES
+                        Run 2to3 concurrently
+  -x NOFIX, --nofix=NOFIX
+                        Prevent a transformation from being run
+  -l, --list-fixes      List available transformations
+  -p, --print-function  Modify the grammar so that print() is a function
+  -v, --verbose         More verbose logging
+  --no-diffs            Don't show diffs of the refactoring
+  -w, --write           Write back modified files
+  -n, --nobackups       Don't write backups for modified files
+  -o OUTPUT_DIR, --output-dir=OUTPUT_DIR
+                        Put output files in this directory instead of
+                        overwriting the input files.  Requires -n.
+  -W, --write-unchanged-files
+                        Also write files even if no changes were required
+                        (useful with --output-dir); implies -w.
+  --add-suffix=ADD_SUFFIX
+                        Append this string to all output filenames. Requires
+                        -n if non-empty.  ex: --add-suffix='3' will generate
+                        .py3 files.
