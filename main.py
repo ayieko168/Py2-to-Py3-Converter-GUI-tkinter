@@ -5,6 +5,7 @@ from idlelib.colorizer import ColorDelegator, color_config
 from idlelib.percolator import Percolator
 from subprocess import run
 import os
+import webbrowser
 import shutil
 from tkinter import filedialog
 from tkinter import messagebox
@@ -26,6 +27,8 @@ findState = DISABLED
 def main():
 
     def convertFile():
+
+        global new_base_dir
 
         if len(python_2_files)!=0:
             # if ther is a file selected...
@@ -64,6 +67,9 @@ def main():
                 print("command = ", command)
             
             print("Done all operations")
+
+            python3SrcBtn.config(state=NORMAL)
+            py3Dest.set(new_base_dir)
                 
 
 
@@ -90,13 +96,12 @@ def main():
         print(python_2_files)
 
         
-
-
     def openPy3Destination():
 
-        dest = filedialog.askdirectory()
+        # dest = os.open(new_base_dir)
+        webbrowser.open(new_base_dir)  
 
-        print(dest)
+        # print(dest)
     
     def convertText():
 
