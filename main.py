@@ -18,6 +18,7 @@ ENTRYFONT = ("Courier", 10)
 BUTTONFONT = ("Dotum", 12)
 
 py2to3pPath = os.path.abspath("utils\\2to3.exe")
+print("py2to3pPath = ", py2to3pPath)
 python_2_files = []
 dest = ""
 file_dir = ""
